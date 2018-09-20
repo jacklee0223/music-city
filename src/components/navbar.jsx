@@ -4,7 +4,11 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className="navbar-container">
-        Music City
+        <div className="navbar-top">
+          <p className="navbar-title">
+            Music City
+          </p>
+        </div>
       </div>
     );
   }
