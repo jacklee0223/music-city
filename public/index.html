@@ -36,5 +36,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBz-GJJr_PnlHix77285MkNvOSxQcdasYM",
+        authDomain: "music-city-d3722.firebaseapp.com",
+        databaseURL: "https://music-city-d3722.firebaseio.com",
+        projectId: "music-city-d3722",
+        storageBucket: "music-city-d3722.appspot.com",
+        messagingSenderId: "131025657859"
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>
 </html>
