@@ -6,8 +6,10 @@ export default class Canvas extends Component {
   }
 
   updateCanvas() {
-      const ctx = this.refs.canvas.getContext('2d');
-      ctx.fillRect(0,0, 100, 100);
+    const ctx = this.refs.canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
   }
 
   render() {

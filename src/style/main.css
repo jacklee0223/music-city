@@ -19,7 +19,7 @@ body {
   padding: 25px 50px;
 }
 
-canvas {
+#myCanvas {
   border: 1px solid #d3d3d3;
 }
 
