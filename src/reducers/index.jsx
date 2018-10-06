@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import ContactReducer from './reducer_contact';
+import VideoReducer from './reducer_videos';
 
-const rootReducer = combineReducers({contact: ContactReducer});
+const rootReducer = combineReducers({contact: VideoReducer});
 
 export default rootReducer;

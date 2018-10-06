@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {fetchMusic} from '../actions/fetch_music';
 
-export default class VideoList extends Component {
+class VideoList extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+
+    this.props.fetchMusic()
+  }
+
   renderVideoList() {
+    console.log(this.props)
     const videoList = ['AAA', 'BBB', 'CCC']
 
     const result = videoList.map( video => {
@@ -27,3 +39,15 @@ export default class VideoList extends Component {
     )
   }
 }
+
+function mapStateToProps({music}) {
+  return {music};
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    fetchMusic
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(VideoList)
